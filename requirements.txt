@@ -1,0 +1,25 @@
+# --- Librerías base ---
+python-dotenv
+requests
+pandas
+numpy
+matplotlib
+seaborn
+ipykernel
+
+# --- Machine Learning / Predicción ---
+scikit-learn
+prophet
+statsmodels
+# --- Backend / API ---
+fastapi
+uvicorn
+pydantic
+SQLAlchemy
+
+streamlit
+plotly
+
+# --- Control de versiones y pruebas (opcional) ---
+pytest
+black
