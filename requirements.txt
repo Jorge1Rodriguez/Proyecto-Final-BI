@@ -6,11 +6,15 @@ numpy
 matplotlib
 seaborn
 ipykernel
-
+scipy
 # --- Machine Learning / Predicción ---
 scikit-learn
 prophet
 statsmodels
+torch 
+torchvision 
+torchaudio
+joblib
 # --- Backend / API ---
 fastapi
 uvicorn
