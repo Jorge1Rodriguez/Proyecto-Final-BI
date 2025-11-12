@@ -1,4 +1,3 @@
-# --- Librerías base ---
 python-dotenv
 requests
 pandas
@@ -7,23 +6,18 @@ matplotlib
 seaborn
 ipykernel
 scipy
-# --- Machine Learning / Predicción ---
 scikit-learn
 prophet
 statsmodels
-torch 
-torchvision 
+torch
+torchvision
 torchaudio
 joblib
-# --- Backend / API ---
 fastapi
-uvicorn
+uvicorn[standard]
 pydantic
 SQLAlchemy
-
 streamlit
 plotly
-
-# --- Control de versiones y pruebas (opcional) ---
 pytest
 black

@@ -9,9 +9,6 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-# =====================================================
-# 🧠 Modelo RNN/LSTM multivariante
-# =====================================================
 class TorchRNN(nn.Module):
     def __init__(self, input_size=1, hidden_size=128, num_layers=3, rnn_type="LSTM", dropout=0.2):
         super().__init__()
@@ -32,9 +29,6 @@ class TorchRNN(nn.Module):
         return self.fc(out[:, -1, :])
 
 
-# =====================================================
-# 📈 Funciones auxiliares
-# =====================================================
 def prepare_features(df):
     df = df.copy()
     df["return"] = df["close"].pct_change()
@@ -63,9 +57,6 @@ def invert_scaling(preds_scaled, scaler, df_scaled, target_col="close"):
     return scaler.inverse_transform(dummy)[:, df_scaled.columns.get_loc(target_col)]
 
 
-# =====================================================
-# 🚀 Entrenamiento del modelo
-# =====================================================
 def train_torch_rnn(X, y,
                     rnn_type="LSTM",
                     hidden_size=128,
@@ -111,9 +102,6 @@ def train_torch_rnn(X, y,
     return model, {"train_loss": best_loss}
 
 
-# =====================================================
-# 📊 Entrenamiento completo para una criptomoneda
-# =====================================================
 def train_crypto_model(df, coin_name):
     """
     Aplica todo el flujo:
